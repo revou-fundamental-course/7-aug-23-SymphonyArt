@@ -1,0 +1,43 @@
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Kalkulator Segitiga</title>
+    </head>
+    <body>
+        <h1>Welcome To Kalkulator Segitiga</h1>
+        <h4 style="text-align: center; color: cadetblue;">Sebuah Web sederhana Untuk Menghitung Luas atau Keliling Segitiga</h4>
+    <div class="slider">
+      <div class="options active" id="luasOption" onclick="showForm('luas')">Menghitung Luas</div>
+      <div class="options" id="kelilingOption" onclick="showForm('keliling')">Menghitung Keliling</div>
+    </div>
+    
+    <div class="form" id="luasForm">
+        <img src="Segitiga.jpg" alt="segitiga">
+        <b>Rumus Luas:<br>
+            Luas=0,5 x Alas X Tinggi</b>
+            <br>
+      <label>Alas: <input type="text" id="alas" required></label>
+      <label>Tinggi: <input type="text" id="tinggi" required></label>
+      <button onclick="validateLuasForm()">Hitung Luas</button> <!--  <-- manggil fungsi calcluas di js --> 
+      <p class="result" id="luasResult"></p>
+      <button style="background-color: coral ;!important" onclick="resetLuasForm()">Reset</button>
+    </div>
+    
+    <div class="form" id="kelilingForm">
+        <img src="Segitiga.jpg" alt="segitiga">
+        <b>Rumus Keliling:<br>
+        Keliling=Sisi 1+Sisi 2 +Sisi 3</b><br>
+      <label>Sisi 1: <input type="text" id="sisi1" required></label>
+      <label>Sisi 2: <input type="text" id="sisi2" required></label>
+      <label>Sisi 3: <input type="text" id="sisi3" required></label>
+      <button onclick="validateKelilingForm()">Hitung Keliling</button><!--  <-- manggil fungsi calckeliling di js --> 
+      <p class="result" id="kelilingResult"></p>
+      <button style="background-color: coral ;!important onclick="resetKelilingForm()"">Reset</button>
+    </div>
+    
+    <script src="js/script.js"></script>
+    </body>
+    </html>
+    
